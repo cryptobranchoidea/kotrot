@@ -1,27 +1,13 @@
-name: Labeler
-on: [pull_request]
-
+name: auto-assign
+on:
+  pull_request:
+    types: [opened, ready_for_review]
 jobs:
-  assign_reviewer:
+  add-reviews:
+    if: contains(github.event.pull_request.labels.*.name, 'ci')
     runs-on: ubuntu-latest
-
     steps:
-      - name: Check if server label is present
-        id: check_server_label
-        run: echo "::set-output name=server_label_present::$(echo ${{ github.event.label.name == 'server' }})"
-
-      - name: Check if client label is present
-        id: check_front_label
-        run: echo "::set-output name=front_label_present::$(echo ${{ github.event.label.name == 'client' }})"
-      
-      - name: Check if ci label is present
-        id: check_ci_label
-        run: echo "::set-output name=ci_label_present::$(echo ${{ github.event.label.name == 'ci' }})"
-
-      - name: Assign reviewer seipan for server label
-        if: steps.check_server_label.outputs.server_label_present == 'true'
-        run: gh pr review ${{ github.event.pull_request.number }} --approve --body "Automated approval" --assignee seipan
-
-      - name: Assign reviewer miso-devel for front label
-        if: steps.check_front_label.outputs.front_label_present == 'true'
-        run: gh pr review ${{ github.event.pull_request.number }} --approve --body "Automated approval" --assignee miso-devel
+      - uses: kentaro-m/auto-assign-action@v1.1.0
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          configuration-path: ".github/auto_assign_gremlins.yml"
