@@ -1,6 +1,6 @@
-front:
-- front/*
+client:
+- client/**/*
 ci:
-- .github/*
+- .github/**/*
 server:
-- server/*
+- server/**/*
