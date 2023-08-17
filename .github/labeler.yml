@@ -1,0 +1,6 @@
+front:
+- front/*
+ci:
+- .github/*
+server:
+- server/*
