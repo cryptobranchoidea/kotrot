@@ -14,9 +14,9 @@ jobs:
         id: check_server_label
         run: echo "::set-output name=server_label_present::$(echo ${{ github.event.label.name == 'server' }})"
 
-      - name: Check if front label is present
+      - name: Check if client label is present
         id: check_front_label
-        run: echo "::set-output name=front_label_present::$(echo ${{ github.event.label.name == 'front' }})"
+        run: echo "::set-output name=front_label_present::$(echo ${{ github.event.label.name == 'client' }})"
       
       - name: Check if ci label is present
         id: check_ci_label
