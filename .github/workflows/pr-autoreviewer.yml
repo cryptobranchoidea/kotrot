@@ -1,7 +1,6 @@
 name: auto-assign
-on:
-  pull_request:
-    types: [opened, ready_for_review]
+on: [pull_request]
+
 jobs:
   add-reviews:
     if: contains(github.event.pull_request.labels.*.name, 'ci')
