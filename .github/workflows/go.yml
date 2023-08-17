@@ -5,9 +5,15 @@ name: Go
 
 on:
   push:
-    branches: [ "main" ]
+    paths:
+     - .github/**
+     - server/**
+    branches: [ "dev","main" ]
   pull_request:
-    branches: [ "main" ]
+    paths:
+     - .github/**
+     - server/**
+    branches: [ "dev","main" ]
 
 jobs:
 
