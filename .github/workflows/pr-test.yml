@@ -64,7 +64,7 @@ jobs:
       uses: actions/github-script@0.9.0
       if: steps.rerun-test.outputs.exitcode == 0
       env:
-        STDOUT: "```${{ steps.rerun-test.outputs.stdout }}```"
+        STDOUT: "```${{ steps.rerun-test.outcome }}```"
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
