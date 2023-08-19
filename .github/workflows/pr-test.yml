@@ -1,4 +1,4 @@
-name: "Deploy"
+name: "rerun-test"
 
 on: 
   issue_comment:
