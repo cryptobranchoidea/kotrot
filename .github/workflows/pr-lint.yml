@@ -37,7 +37,7 @@ jobs:
           uses: actions/github-script@v3
           env:
             MESSAGE: |
-                テストを再実行しています。しばらくお待ちください。
+                lintを再実行しています。しばらくお待ちください。
           with:
               github-token: ${{secrets.GITHUB_TOKEN}}
               script: |
