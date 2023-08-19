@@ -2,9 +2,12 @@ import { Box, Text } from '@kuma-ui/core';
 
 export default function Home() {
   return (
-    <Box as="main" backgroundColor="red">
+    <Box as="main" padding={10} textAlign="center">
       <Text as="h1" fontSize={24} fontWeight="bold">
-        Welcome to Kuma 🐻‍❄️
+        Fisap
+      </Text>
+      <Text as="p" fontWeight="bold">
+        fill someone gap
       </Text>
     </Box>
   );

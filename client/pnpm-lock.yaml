@@ -26,6 +26,9 @@ dependencies:
   eslint-config-next:
     specifier: 13.4.17
     version: 13.4.17(eslint@8.47.0)(typescript@5.1.6)
+  modern-css-reset:
+    specifier: ^1.4.0
+    version: 1.4.0
   next:
     specifier: 13.4.17
     version: 13.4.17(@babel/core@7.22.10)(react-dom@18.2.0)(react@18.2.0)
@@ -3668,6 +3671,10 @@ packages:
     resolution: {integrity: sha512-+hEnITedc8LAtIP9u3HJDFIdcLV2vXP33sqLLIzkv1Db1zO/1OxbvYf0Y1OC/S/Qo5dxHXepofhmxL02PsKe+A==}
     engines: {node: '>=10'}
     hasBin: true
+    dev: false
+
+  /modern-css-reset@1.4.0:
+    resolution: {integrity: sha512-0crZmSFmrxkI7159rvQWjpDhy0u4+Awg/iOycJdlVn0RSeft/a+6BrQHR3IqvmdK25sqt0o6Z5Ap7cWgUee2rw==}
     dev: false
 
   /ms@2.1.2:
