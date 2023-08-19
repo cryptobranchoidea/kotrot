@@ -9,6 +9,19 @@ jobs:
     if: contains(github.event.comment.html_url, '/pull/') && startsWith(github.event.comment.body, '/rerun test')
     runs-on: [ubuntu-latest]
     steps:
+        - name: comment
+          uses: actions/github-script@v5
+          env:
+           MESSAGE: |
+            テストを再実行します。
+          with:
+           script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: process.env.MESSAGE
+            })
         - name: get upstream branch
           id: upstreambranch
           env:
