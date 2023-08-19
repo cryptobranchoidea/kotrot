@@ -14,7 +14,7 @@ jobs:
       uses: xt0rted/slash-command-action@065da288bcfe24ff96b3364c7aac1f6dca0fb027 #1.1.0
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
-        command: rerun
+        command: rerun test
         reaction: "true"
         reaction-type: "eyes"
     
