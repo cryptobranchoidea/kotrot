@@ -1,4 +1,4 @@
-name: "Deploy"
+name: "rerun-test"
 
 on: 
   issue_comment:
@@ -14,9 +14,14 @@ jobs:
       uses: xt0rted/slash-command-action@065da288bcfe24ff96b3364c7aac1f6dca0fb027 #1.1.0
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
-        command: deploy
+        command: rerun
         reaction: "true"
         reaction-type: "eyes"
+    
+    - name: Git settings
+      run: |
+        git config --global user.name release-machine
+        git config --global user.email email@example.com
 
     - name: "Get branch name"
       uses: xt0rted/pull-request-comment-branch@29fe0354c01b30fb3de76f193ab33abf8fe5ddb0 #1.2.0
