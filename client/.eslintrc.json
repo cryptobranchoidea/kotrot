@@ -7,6 +7,6 @@
     "prettier"
   ],
   "parserOptions": {
-    "project": "../client/tsconfig.json"
+    "project": "tsconfig.json"
   }
- }
+}
