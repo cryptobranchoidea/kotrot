@@ -6,7 +6,7 @@ on:
 jobs:
   manual_plan:
     name: "rerun test"
-    if: contains(github.event.comment.html_url, '/pull/') && startsWith(github.event.comment.body, '/rerun test')
+    if: contains(github.event.comment.html_url, '/pull/') && startsWith(github.event.comment.body, '/rerun')
     runs-on: [ubuntu-latest]
     steps:
         - name: comment
