@@ -4,22 +4,50 @@ on:
     types: [created, edited]
 
 jobs:
-  manual_plan:
-    name: "rerun lint"
-    if: contains(github.event.comment.html_url, '/pull/') && startsWith(github.event.comment.body, '/rerun lint')
-    runs-on: [ubuntu-latest]
+  build:
+    runs-on: ubuntu-latest
+      
     steps:
-        - name: get upstream branch
-          id: upstreambranch
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        - name: "Check for Command"
+          id: command
+          uses: xt0rted/slash-command-action@065da288bcfe24ff96b3364c7aac1f6dca0fb027 #1.1.0
+          with:
+              repo-token: ${{ secrets.GITHUB_TOKEN }}
+              command: rerun-lint
+              reaction: "true"
+              reaction-type: "eyes"
+          
+        - name: Git settings
           run: |
-            echo "::set-output name=branchname::$(curl -H "Authorization: token ${GITHUB_TOKEN}" ${{ github.event.issue.pull_request.url }} | jq '.head.ref' | sed 's/\"//g')"
-  
-        - name: Checkout upstream repo
+            git config --global user.name release-machine
+            git config --global user.email email@example.com
+      
+        - name: "Get branch name"
+          uses: xt0rted/pull-request-comment-branch@29fe0354c01b30fb3de76f193ab33abf8fe5ddb0 #1.2.0
+          id: get_branch
+          with:
+            repo_token: ${{ secrets.GITHUB_TOKEN }}
+      
+        - name: "Checkout"
           uses: actions/checkout@v2
           with:
-            ref: ${{ steps.upstreambranch.outputs.branchname }}
+            ref: ${{ steps.get_branch.outputs.head_ref }}
+      
+        - name: "Post Comment"
+          uses: actions/github-script@v3
+          env:
+            MESSAGE: |
+                テストを再実行しています。しばらくお待ちください。
+          with:
+              github-token: ${{secrets.GITHUB_TOKEN}}
+              script: |
+                github.issues.createComment({
+                  issue_number: context.issue.number,
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  body: process.env.MESSAGE
+                })
+        - uses: actions/checkout@v3
 
         - uses: actions/setup-go@v4
           with:
@@ -34,16 +62,15 @@ jobs:
     
         - name: plan success message
           uses: actions/github-script@0.9.0
-          if: steps.rerun-lint.outputs.exitcode == 0
           env:
-            STDOUT: "```${{ steps.rerun-lint.outputs.stdout }}```"
+            STDOUT: "```${{ steps.rerun-lint.outcome }}```"
           with:
-            github-token: ${{secrets.GITHUB_TOKEN}}
-            script: |
-                github.issues.createComment({
-                  issue_number: context.issue.number,
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  body: "#### `test rerun` Success\n" + process.env.STDOUT
-                })
+             github-token: ${{secrets.GITHUB_TOKEN}}
+             script: |
+                 github.issues.createComment({
+                       issue_number: context.issue.number,
+                       owner: context.repo.owner,
+                       repo: context.repo.repo,
+                       body: "#### `test rerun` result\n" + process.env.STDOUT
+                     })
         

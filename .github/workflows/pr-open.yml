@@ -18,8 +18,8 @@ jobs:
 
             | 対象 | コメント | 補足 |
             | --- | --- | --- |
-            | テスト | `/rerun test` | ビルド & テストを実行する |
-            | lint | `/rerun lint` | linter を実行する |
+            | テスト | `/rerun-test` | ビルド & テストを実行する |
+            | lint | `/rerun-lint` | linter を実行する |
         with:
           script: |
             github.rest.issues.createComment({
