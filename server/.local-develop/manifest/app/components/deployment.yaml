@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fisap-app
+spec:
+  replicas: 3  # レプリカ数を適宜調整
+  selector:
+    matchLabels:
+      app: glyph
+  template:
+    metadata:
+      labels:
+        app: glyph
+    spec:
+      containers:
+        - name: fisap-app
+          image: your-docker-image-name:your-tag  
+          ports:
+            - containerPort: 8080
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "256Mi"
+            limits:
+              cpu: "500m"
+              memory: "512Mi"

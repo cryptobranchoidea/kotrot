@@ -1,7 +1,7 @@
 ## Build
 FROM golang:1.20-buster AS build
 
-WORKDIR /go/src/github.com/Doer-org/glyph
+WORKDIR /go/src/github.com/cryptobranchoidea/fisap
 
 COPY go.mod ./
 COPY go.sum ./
