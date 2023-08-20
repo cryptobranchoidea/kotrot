@@ -6,11 +6,11 @@ spec:
   replicas: 3  # レプリカ数を適宜調整
   selector:
     matchLabels:
-      app: glyph
+      app: fisap
   template:
     metadata:
       labels:
-        app: glyph
+        app: fisap
     spec:
       containers:
         - name: fisap-app
