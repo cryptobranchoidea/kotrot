@@ -1,0 +1,30 @@
+name: Pull Request open comment
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  comment_to_pr:
+    name: Comment to PR
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: comment
+        uses: actions/github-script@v5
+        env:
+          MESSAGE: |
+            prありがとうございます。実行したい内容に応じて以下のコマンドを実行してください。
+
+            | 対象 | コメント | 補足 |
+            | --- | --- | --- |
+            | テスト | `/reruntest` | ビルド & テストを実行する |
+            | lint | `/rerunlint` | linter を実行する |
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: process.env.MESSAGE
+            })
