@@ -1,4 +1,8 @@
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "prettier.configPath": "./.prettierrc"
+  "prettier.configPath": "./.prettierrc",
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "page.tsx": "*.stories.tsx, *.test.tsx "
+  }
 }
