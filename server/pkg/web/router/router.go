@@ -21,6 +21,9 @@ func NewRouter() *Router {
 	return &Router{app: app}
 }
 
-func (r *Router) Serve() error {
-	return r.app.Listen(":3000")
+func (r *Router) Serve() {
+	err := r.app.Listen(":3000")
+	if err != nil {
+		panic(err)
+	}
 }
