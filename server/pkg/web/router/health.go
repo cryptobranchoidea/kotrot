@@ -1,10 +1,9 @@
 package router
 
 import (
-	"github.com/cryptobranchoidea/fisap/pkg/web/handler"
-	"github.com/gofiber/fiber/v2"
+	"github.com/cryptobranchoidea/fisap/pkg/web/handler/health"
 )
 
-func HealthRouter(app *fiber.App) {
-	app.Get("/health", handler.HealthHandler)
+func (r *Router) HealthRouter() {
+	r.app.Get("/health", health.HealthHandler)
 }
