@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fisap-app
+spec:
+  replicas: 3 
+  selector:
+    matchLabels:
+      app: fisap
+  template:
+    metadata:
+      labels:
+        app: fisap
+    spec:
+      containers:
+        - name: fisap-app
+          image: yadon3141/fisap-app 
+          ports:
+            - containerPort: 3000
