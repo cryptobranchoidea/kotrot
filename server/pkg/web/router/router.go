@@ -22,7 +22,7 @@ func NewRouter() *Router {
 }
 
 func (r *Router) Serve() {
-	err := r.app.Listen(":3000")
+	err := r.app.Listen(":8080")
 	if err != nil {
 		panic(err)
 	}
