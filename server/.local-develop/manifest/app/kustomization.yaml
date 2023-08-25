@@ -3,3 +3,4 @@ kind: Kustomization
 
 resources:
   - components/deployment.yaml  
+  - components/service.yaml  
