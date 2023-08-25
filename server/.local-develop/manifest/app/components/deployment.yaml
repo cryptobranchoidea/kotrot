@@ -16,4 +16,4 @@ spec:
         - name: fisap-app
           image: yadon3141/fisap-app 
           ports:
-            - containerPort: 8080
+            - containerPort: 3000
