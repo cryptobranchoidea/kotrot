@@ -1,0 +1,17 @@
+basePath: /
+info:
+  contact: {}
+  title: fisap API
+  version: "1.0"
+paths:
+  /health:
+    get:
+      description: health check
+      responses:
+        "200":
+          description: ok
+          schema:
+            type: string
+      tags:
+      - health
+swagger: "2.0"
