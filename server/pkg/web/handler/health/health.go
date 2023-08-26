@@ -8,5 +8,5 @@ import "github.com/gofiber/fiber/v2"
 // @Success      200  {string} string "ok"
 // @Router       /health [get]
 func HealthHandler(c *fiber.Ctx) error {
-	return c.SendString("OK")
+	return c.SendString("ok")
 }
