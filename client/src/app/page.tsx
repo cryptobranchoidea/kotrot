@@ -5,18 +5,17 @@ import { DynamicLogo } from './_components/dynamicLogo';
 
 export default function Home() {
   return (
-    <Box textAlign="center">
+    <Box textAlign="center" padding={space.lg}>
       <DynamicLogo />
       <Text
         as="h1"
         fontSize="fontSizes.xl"
         fontWeight="bold"
         children="Fisap"
-        paddingTop={space.sm}
-        paddingBottom={space.md}
+        paddingY={space.xl}
         fontFamily="Londrina Solid"
       />
-      <VStack gap={space.sm}>
+      <VStack gap={space.md}>
         <AppLink href="/signup" text="新規登録" />
         <AppLink href="/board/new" text="募集する" />
       </VStack>
