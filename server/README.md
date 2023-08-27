@@ -1,8 +1,13 @@
-## setup
+# setup
 
 ## app用のkubeをビルドする
 ```
 make build-kube
+```
+
+## app用のkubeを再ビルドする
+```
+make re-kube
 ```
 
 
