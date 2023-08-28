@@ -1,7 +1,7 @@
 import { AppLink } from '@/ui/primitive/appLink';
 import { space } from '@/ui/token';
 import { Box, Text, VStack } from '@kuma-ui/core';
-import { DynamicLogo } from './_components/dynamicLogo';
+import { DynamicLogo } from '../_components/dynamicLogo';
 
 export default function Home() {
   return (
