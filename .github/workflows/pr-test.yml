@@ -35,7 +35,7 @@ jobs:
         ref: ${{ steps.get_branch.outputs.head_ref }}
 
     - name: "Post Comment"
-      uses: actions/github-script@v3
+      uses: actions/github-script@v6.4.1
       env:
         MESSAGE: |
           テストを再実行しています。しばらくお待ちください。
@@ -61,7 +61,7 @@ jobs:
           go test ./...
       
     - name: plan success message
-      uses: actions/github-script@0.9.0
+      uses: actions/github-script@v6.4.1
       env:
         STDOUT: "```${{ steps.rerun-test.outcome }}```"
       with:

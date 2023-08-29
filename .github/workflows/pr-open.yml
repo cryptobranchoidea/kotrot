@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: comment
-        uses: actions/github-script@v5
+        uses: actions/github-script@v6.4.1
         env:
           MESSAGE: |
             prありがとうございます。実行したい内容に応じて以下のコマンドを実行してください。
