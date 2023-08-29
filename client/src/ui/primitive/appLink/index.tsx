@@ -1,24 +1,28 @@
 import { space } from '@/ui/token';
 import { Box } from '@kuma-ui/core';
 import Link from 'next/link';
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 
-type TProps = { href: string; text: string };
+type TProps = { href: string; children: ReactNode; style?: boolean };
 
-export const AppLink: FC<TProps> = ({ href, text }) => {
+export const AppLink: FC<TProps> = ({ href, children, style }) => {
   return (
-    <Link href={href} style={{ textDecoration: 'none', padding: space.sm }}>
-      <Box
-        fontSize="fontSizes.md"
-        fontWeight="bold"
-        border="3px solid"
-        color="black"
-        padding={space.sm}
-        _hover={{ borderColor: 'colors.secondary.main', opacity: 0.8 }}
-        borderRadius={3}
-      >
-        {text}
-      </Box>
+    <Link href={href} style={{ textDecoration: 'none', padding: space.sm, color: '#232323' }}>
+      {style ? (
+        <Box
+          fontSize="fontSizes.md"
+          fontWeight="bold"
+          border="3px solid"
+          color="black"
+          padding={space.sm}
+          _hover={{ borderColor: 'colors.secondary.main', opacity: 0.8 }}
+          borderRadius={3}
+        >
+          {children}
+        </Box>
+      ) : (
+        <Box _hover={{ borderColor: 'colors.secondary.main', opacity: 0.8 }}>{children}</Box>
+      )}
     </Link>
   );
 };

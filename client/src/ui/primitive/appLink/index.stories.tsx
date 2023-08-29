@@ -12,5 +12,9 @@ export default meta;
 type Story = StoryObj<typeof AppLink>;
 
 export const Default: Story = {
-  render: () => <AppLink href="/sigunp" text="新規登録" />,
+  render: () => <AppLink href="/sigunp" children="新規登録" />,
+};
+
+export const Styled: Story = {
+  render: () => <AppLink href="/sigunp" children="新規登録" style />,
 };

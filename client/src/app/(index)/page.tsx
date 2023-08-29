@@ -16,8 +16,8 @@ export default function Home() {
         fontFamily="Londrina Solid"
       />
       <VStack gap={space.md}>
-        <AppLink href="/signup" text="新規登録" />
-        <AppLink href="/board/new" text="募集する" />
+        <AppLink href="/signup" children="新規登録" style />
+        <AppLink href="/board/new" children="募集する" style />
       </VStack>
     </Box>
   );
