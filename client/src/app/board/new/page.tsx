@@ -1,10 +1,9 @@
-import { space } from '@/ui/token';
-import { Box, Text } from '@kuma-ui/core';
+import { BoardNewForm } from './_components/Form';
 
 export default function BoardNew() {
   return (
-    <Box textAlign="center" padding={space.lg}>
-      <Text>ボード作成</Text>
-    </Box>
+    <>
+      <BoardNewForm />
+    </>
   );
 }

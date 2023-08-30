@@ -1,13 +1,6 @@
-import { Header } from '@/ui/template/header';
-import { space } from '@/ui/token';
-import { Box } from '@kuma-ui/core';
+import { WithHeaderWrapper } from '@/ui/template/wrapper/withHeaderWrapper';
 import 'modern-css-reset/dist/reset.min.css';
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <Box marginY={space.md}>
-      <Header />
-      {children}
-    </Box>
-  );
+export default function PageLayout({ children }: { children: React.ReactNode }) {
+  return <WithHeaderWrapper title="Board作成">{children}</WithHeaderWrapper>;
 }
