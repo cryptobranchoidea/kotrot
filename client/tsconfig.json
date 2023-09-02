@@ -14,10 +14,12 @@
     "jsx": "preserve",
     "incremental": true,
     "plugins": [{ "name": "next" }],
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "paths": {
-      "@/*": ["src/*"],
-      "@/ui/*": ["src/ui/*"]
+      "@/*": ["*"],
+      "@/ui/*": ["ui/*"],
+      "@/ui/primitive/*": ["ui/primitive/*"],
+      "@/ui/common/*": ["ui/common/*"]
     },
     "types": ["vitest/importMeta"]
   },
