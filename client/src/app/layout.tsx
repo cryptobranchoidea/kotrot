@@ -11,7 +11,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Flex
             as="main"
             justifyContent="center"
-            height="100vh"
+            minHeight="100vh"
             width={['95%', '70%', '50%']}
             margin="auto"
             flexBasis="100%"
