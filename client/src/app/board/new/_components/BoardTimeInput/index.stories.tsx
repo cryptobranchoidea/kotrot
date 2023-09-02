@@ -1,3 +1,4 @@
+import { useOnChange } from '@/hooks/onChangeHook';
 import { Meta, StoryObj } from '@storybook/react';
 import { BoardTimeInput } from '.';
 
@@ -11,8 +12,17 @@ export default meta;
 
 type Story = StoryObj<typeof BoardTimeInput>;
 
-export const Number: Story = {
+export const Default: Story = {
   render: () => {
-    return <BoardTimeInput />;
+    const [startTime, onChangeStartTime] = useOnChange({ initialValue: '' });
+    const [endTime, onChangeEndTime] = useOnChange({ initialValue: '' });
+    return (
+      <BoardTimeInput
+        startTime={startTime}
+        endTime={endTime}
+        onChangeStartTime={onChangeStartTime}
+        onChangeEndTime={onChangeEndTime}
+      />
+    );
   },
 };
