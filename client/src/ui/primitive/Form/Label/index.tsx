@@ -5,7 +5,7 @@ type TProps = { name: string };
 
 export const Label: FC<TProps> = ({ name }) => {
   return (
-    <Text as="label" fontSize="fontSizes.md">
+    <Text as="label" fontSize="fontSizes.md" htmlFor={name}>
       {name}
     </Text>
   );

@@ -12,11 +12,11 @@ type TProps = {
 export const Input: FC<TProps> = ({ type, name, state, onChange }) => {
   return (
     <StyledInput
+      id={name}
       name={name}
       type={type}
       borderRadius={3}
       width="100%"
-      flexBasis="100%"
       padding={space.sm}
       value={state}
       onChange={onChange}
