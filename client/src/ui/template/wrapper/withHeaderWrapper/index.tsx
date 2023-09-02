@@ -7,7 +7,7 @@ type TProps = { children: ReactNode; title: string };
 
 export const WithHeaderWrapper: FC<TProps> = ({ children, title }) => {
   return (
-    <Box marginY={space.xl}>
+    <Box marginY={space.xl} flexBasis="90%">
       <Header />
       <Text as="h2" children={title} textAlign="center" marginY={space.xl} fontSize="fontSizes.lg" />
       {children}
