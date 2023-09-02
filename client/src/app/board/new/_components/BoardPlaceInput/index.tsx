@@ -22,7 +22,7 @@ export const BoardPlaceInput: FC<TProps> = ({ tabs }) => {
               <Button
                 key={tab.head}
                 onClick={() => setCurrentHead(tab.head)}
-                style={{
+                kuma={{
                   fontSize: 'fontSizes.sm',
                   borderBottom: isCurrent ? '2px solid' : '',
                   color: isCurrent ? '' : textColor.middle,

@@ -11,7 +11,7 @@ export default meta;
 
 type Story = StoryObj<typeof BoardPlaceInput>;
 
-export const Number: Story = {
+export const Default: Story = {
   render: () => {
     return (
       <BoardPlaceInput
