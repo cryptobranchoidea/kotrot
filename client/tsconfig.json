@@ -14,12 +14,9 @@
     "jsx": "preserve",
     "incremental": true,
     "plugins": [{ "name": "next" }],
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["*"],
-      "@/ui/*": ["ui/*"],
-      "@/ui/primitive/*": ["ui/primitive/*"],
-      "@/ui/common/*": ["ui/common/*"]
+      "@/*": ["src/*"]
     },
     "types": ["vitest/importMeta"]
   },
