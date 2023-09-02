@@ -1,4 +1,3 @@
-'use client';
 import { bgColor, space } from '@/ui/token';
 import { Box, Flex } from '@kuma-ui/core';
 import { FC } from 'react';
