@@ -16,8 +16,7 @@
     "plugins": [{ "name": "next" }],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "@/ui/*": ["src/ui/*"]
+      "@/*": ["./src/*"]
     },
     "types": ["vitest/importMeta"]
   },
