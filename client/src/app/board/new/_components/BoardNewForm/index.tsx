@@ -33,13 +33,13 @@ export const BoardNewForm: FC = () => {
             {
               head: 'マップ',
               content: (
-                <div style={{ minHeight: '400px', width: '100%' }}>
+                <Box minHeight="400px" width="100%">
                   <GoogleMapReact
                     bootstrapURLKeys={{ key: '' }}
                     defaultCenter={defaultProps.center}
                     defaultZoom={defaultProps.zoom}
                   ></GoogleMapReact>
-                </div>
+                </Box>
               ),
             },
           ]}
