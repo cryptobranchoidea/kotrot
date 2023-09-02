@@ -5,7 +5,7 @@ import { FC, ReactNode } from 'react';
 
 type TProps = { href: string; children: ReactNode; style?: boolean };
 
-export const AppLink: FC<TProps> = ({ href, children, style }) => {
+export const TextLink: FC<TProps> = ({ href, children, style }) => {
   return (
     <Link href={href} style={{ textDecoration: 'none', padding: space.sm, color: '#232323' }}>
       {style ? (

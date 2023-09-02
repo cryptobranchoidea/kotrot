@@ -12,5 +12,9 @@ export default meta;
 type Story = StoryObj<typeof Header>;
 
 export const Default: Story = {
-  render: () => <Header />,
+  render: () => (
+    <Header title="タイトル">
+      <p>コンテンツ</p>
+    </Header>
+  ),
 };
