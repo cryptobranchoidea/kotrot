@@ -8,7 +8,7 @@ type TProps = { children: ReactNode; title: string };
 
 export const Header: FC<TProps> = ({ children, title }) => {
   return (
-    <Box marginY={space.xl} flexBasis="90%">
+    <Box as="header" marginY={space.xl} flexBasis="90%">
       <Flex justifyContent="center">
         <TextLink href="/">
           <Logo />
