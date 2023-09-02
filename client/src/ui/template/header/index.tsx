@@ -1,6 +1,5 @@
-'use client';
-import { AppLink } from '@/ui/primitive/appLink';
-import { Logo } from '@/ui/primitive/logo';
+import { AppLink } from '@/ui/primitive/AppLink';
+import { Logo } from '@/ui/primitive/Logo';
 import { Flex } from '@kuma-ui/core';
 import { FC } from 'react';
 

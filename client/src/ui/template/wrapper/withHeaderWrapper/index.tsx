@@ -1,7 +1,7 @@
 import { space } from '@/ui/token';
 import { Box, Text } from '@kuma-ui/core';
 import { FC, ReactNode } from 'react';
-import { Header } from '../../header';
+import { Header } from '../../Header';
 
 type TProps = { children: ReactNode; title: string };
 

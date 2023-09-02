@@ -1,5 +1,5 @@
 'use client';
-import { space } from '@/ui/token';
+import { bgColor, space } from '@/ui/token';
 import { Box, Flex } from '@kuma-ui/core';
 import { FC } from 'react';
 
@@ -10,8 +10,8 @@ const Atom: FC<{ row: number; column: number }> = ({ row, column }) => {
       width="4px"
       height="4px"
       borderRadius="1px"
-      backgroundColor={`${isLight ? 'colors.secondary.sub' : 'colors.primary'}`}
-      _hover={{ backgroundColor: 'colors.secondary.sub' }}
+      backgroundColor={`${isLight ? bgColor.secondary.accent : bgColor.primary}`}
+      _hover={{ backgroundColor: bgColor.secondary.accent }}
     />
   );
 };

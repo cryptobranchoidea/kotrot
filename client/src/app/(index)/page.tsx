@@ -1,4 +1,4 @@
-import { AppLink } from '@/ui/primitive/appLink';
+import { AppLink } from '@/ui/primitive/AppLink';
 import { space } from '@/ui/token';
 import { Box, Text, VStack } from '@kuma-ui/core';
 import { DynamicLogo } from '../_components/dynamicLogo';

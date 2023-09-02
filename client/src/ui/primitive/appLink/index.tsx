@@ -12,7 +12,7 @@ export const AppLink: FC<TProps> = ({ href, children, style }) => {
         <Box
           fontSize="fontSizes.md"
           fontWeight="bold"
-          border="3px solid"
+          borderBottom="3px solid"
           color="black"
           padding={space.sm}
           _hover={{ borderColor: 'colors.secondary.main', opacity: 0.8 }}
