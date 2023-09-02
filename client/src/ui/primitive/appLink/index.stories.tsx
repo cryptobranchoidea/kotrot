@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { AppLink } from '.';
 
 const meta: Meta<typeof AppLink> = {
-  title: 'ui/primitive/appLink',
+  title: 'ui/primitive/AppLink',
   component: AppLink,
   parameters: { layout: 'centered' },
 };
