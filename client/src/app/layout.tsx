@@ -12,10 +12,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             as="main"
             justifyContent="center"
             height="100vh"
-            width={'33%'}
+            width={['95%', '70%', '50%']}
             margin="auto"
-            borderLeft={['', '', '4px solid #638FFF']}
-            borderRight={['', '', '4px solid #638FFF']}
+            flexBasis="100%"
+            borderLeft="4px solid #638FFF"
+            borderRight="4px solid #638FFF"
           >
             {children}
           </Flex>
