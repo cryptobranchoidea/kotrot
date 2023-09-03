@@ -1,9 +1,11 @@
 import { Meta, StoryObj } from '@storybook/react';
-import Layout from './layout';
+
+import BoardNewLayout from '@/app/board/new/layout';
+import Layout from '@/app/layout';
 import Page from './page';
 
 const meta: Meta<typeof Page> = {
-  title: 'app/Home',
+  title: 'app/board/new',
   component: Page,
 };
 
@@ -14,7 +16,9 @@ type Story = StoryObj<typeof Page>;
 export const Default: Story = {
   render: () => (
     <Layout>
-      <Page />
+      <BoardNewLayout>
+        <Page />
+      </BoardNewLayout>
     </Layout>
   ),
 };
