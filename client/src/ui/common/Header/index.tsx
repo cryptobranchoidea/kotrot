@@ -1,4 +1,4 @@
-import { Logo } from '@/ui/primitive/Logo';
+import { ServiceLogo } from '@/ui/primitive/ServiceLogo';
 import { TextLink } from '@/ui/primitive/TextLink';
 import { space } from '@/ui/token';
 import { Box, Flex, Text } from '@kuma-ui/core';
@@ -11,7 +11,7 @@ export const Header: FC<TProps> = ({ children, title }) => {
     <Box as="header" marginY={space.xl} flexBasis="90%">
       <Flex justifyContent="center">
         <TextLink href="/">
-          <Logo />
+          <ServiceLogo />
         </TextLink>
       </Flex>
       <Text as="h2" children={title} textAlign="center" marginY={space.xl} fontSize="fontSizes.lg" />

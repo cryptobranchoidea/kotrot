@@ -25,7 +25,7 @@ const LogoLow: FC<{ row: number; rowSize: number }> = ({ row, rowSize }) => {
   );
 };
 
-export const Logo: FC = () => {
+export const ServiceLogo: FC = () => {
   const rowSizes = [5, 5, 5, 5, 5, 5, 6, 7];
   return (
     <Flex justifyContent="center">
