@@ -3,7 +3,7 @@ module github.com/cryptobranchoidea/fisap
 go 1.20
 
 require (
-	github.com/gofiber/fiber/v2 v2.48.0
+	github.com/gofiber/fiber/v2 v2.49.0
 	github.com/gofiber/swagger v0.1.12
 	github.com/seipan/loghook v0.1.6
 	github.com/swaggo/swag v1.16.2
