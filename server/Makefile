@@ -26,7 +26,7 @@ up: ## docker環境を立ち上げる
 	$(ENV_LOCAL) docker-compose \
 	-f $(DOCKER_COMPOSE_LOCAL) \
 	-f $(DOCKER_COMPOSE_LOCAL_DATABASE) \
-	-f $(DOCKER_COMPOSE_LOCAL_SERVER) up -d
+	-f $(DOCKER_COMPOSE_LOCAL_SERVER) up
 
 .PHONY: down
 down: ## dockerイメージを削除し、docker環境を閉じる
@@ -41,6 +41,13 @@ fclean:down del-volumes ## マウントしたデータを削除、またdocker�
 
 .PHONY: re
 re:fclean up
+
+.PHONY: del-volumes
+del-volumes:del-data
+
+.PHONY: del-data
+del-data:
+	sudo $(RM) $(DATA_DIR)
 
 .PHONY: build-kube
 build-kube:
