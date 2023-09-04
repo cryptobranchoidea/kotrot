@@ -1,0 +1,7 @@
+version: "3"
+
+services:
+  server:
+    container_name: fisap-server
+    restart: always
+    tty: true
