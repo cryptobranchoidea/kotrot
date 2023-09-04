@@ -1,5 +1,20 @@
 # setup
 
+# Docker
+
+## ビルドする
+```
+make up
+```
+
+## 再ビルドする
+```
+make re
+```
+
+# k8s
+
+
 ## app用のkubeをビルドする
 ```
 make build-kube
