@@ -5,7 +5,7 @@ go 1.20
 require (
 	github.com/gofiber/fiber/v2 v2.49.2
 	github.com/gofiber/swagger v0.1.13
-	github.com/seipan/loghook v0.1.7
+	github.com/seipan/loghook v0.1.8
 	github.com/swaggo/swag v1.16.2
 )
 
