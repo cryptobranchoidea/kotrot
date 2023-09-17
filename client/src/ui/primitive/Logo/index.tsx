@@ -20,8 +20,9 @@ export const Logo: FC<TProps> = ({ size }) => {
       </style>
       <Box position="relative" transform="rotate(-20deg)" width={70} height={70} margin="auto">
         <Flex gap={1} position="absolute" top="50%" left="50%" transform="translate(-50%, -50%)" zIndex={1}>
-          {[...Array(3)].map(() => (
+          {[...Array(3)].map((idx) => (
             <Box
+              key={idx}
               width={width}
               height={height}
               borderRadius="50%"
