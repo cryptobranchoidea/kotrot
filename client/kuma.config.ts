@@ -1,8 +1,9 @@
-import { bgColor, fontSizes, textColor } from '@/ui/token';
+import { color, fontSizes } from '@/ui/token';
 import { createTheme } from '@kuma-ui/core';
+import 'modern-css-reset/dist/reset.min.css';
 
 const theme = createTheme({
-  colors: { ...bgColor, ...textColor },
+  colors: { ...color },
   fontSizes: { ...fontSizes },
 });
 
