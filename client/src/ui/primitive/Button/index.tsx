@@ -20,7 +20,6 @@ export const Button: FC<TProps> = ({ onClick, children, kuma, styled }) => {
           border="2px solid"
           _hover={{ opacity: 0.8, backgroundColor: 'colors.primary' }}
           fontSize="fontSizes.md"
-          color="colors.dark"
           padding={space.sm}
           borderRadius={3}
         >

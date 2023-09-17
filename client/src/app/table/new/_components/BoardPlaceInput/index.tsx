@@ -2,7 +2,7 @@
 import { Button } from '@/ui/primitive/Button';
 import { InputWrapper } from '@/ui/primitive/Form/InputWrapper';
 import { Label } from '@/ui/primitive/Form/Label';
-import { space, textColor } from '@/ui/token';
+import { space } from '@/ui/token';
 import { Box, Flex } from '@kuma-ui/core';
 import { FC, ReactNode, useState } from 'react';
 
@@ -25,7 +25,7 @@ export const BoardPlaceInput: FC<TProps> = ({ tabs }) => {
                 kuma={{
                   fontSize: 'fontSizes.sm',
                   borderBottom: isCurrent ? '2px solid' : '',
-                  color: isCurrent ? '' : textColor.middle,
+                  color: isCurrent ? '' : '',
                 }}
               >
                 {tab.head}

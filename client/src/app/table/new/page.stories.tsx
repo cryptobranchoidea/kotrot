@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 
-import BoardNewLayout from '@/app/board/new/layout';
 import Layout from '@/app/layout';
+import BoardNewLayout from '@/app/table/new/layout';
 import Page from './page';
 
 const meta: Meta<typeof Page> = {
