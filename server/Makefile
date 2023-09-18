@@ -63,3 +63,13 @@ docker-push:
 re-kube:
 	docker build -t yadon3141/fisap-app .
 	cd .local-develop/manifest/app && kubectl rollout restart deploy fisap-app
+
+.PHONY: swag
+swag:
+	go install github.com/swaggo/swag/cmd/swag@latest
+	swag init
+
+.PHONY: push
+push:
+	chmod +x script/git.sh
+	./script/git.sh "feat:all"

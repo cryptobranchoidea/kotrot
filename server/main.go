@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/cryptobranchoidea/fisap/cmd"
+	"github.com/cryptobranchoidea/kotrot/cmd"
 )
 
 // @title			fisap API

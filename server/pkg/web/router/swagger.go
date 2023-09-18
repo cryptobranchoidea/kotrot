@@ -1,7 +1,7 @@
 package router
 
 import (
-	_ "github.com/cryptobranchoidea/fisap/docs"
+	_ "github.com/cryptobranchoidea/kotrot/docs"
 	"github.com/gofiber/swagger"
 )
 
