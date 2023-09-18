@@ -1,4 +1,4 @@
-module github.com/cryptobranchoidea/fisap
+module github.com/cryptobranchoidea/kotrot
 
 go 1.20
 
@@ -19,6 +19,7 @@ require (
 	github.com/google/uuid v1.3.1 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/klauspost/compress v1.16.7 // indirect
+	github.com/labstack/gommon v0.4.0 // indirect
 	github.com/mailru/easyjson v0.7.7 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.19 // indirect
@@ -28,6 +29,7 @@ require (
 	github.com/swaggo/files/v2 v2.0.0 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasthttp v1.49.0 // indirect
+	github.com/valyala/fasttemplate v1.2.2 // indirect
 	github.com/valyala/tcplisten v1.0.0 // indirect
 	golang.org/x/sys v0.12.0 // indirect
 	golang.org/x/tools v0.12.0 // indirect
