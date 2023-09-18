@@ -68,3 +68,8 @@ re-kube:
 build-kube:
 	go install github.com/swaggo/swag/cmd/swag@latest
 	swag init
+
+.PHONY: push
+build-kube:
+	chmod +x script/git.sh
+	./script/git.sh feat:all
