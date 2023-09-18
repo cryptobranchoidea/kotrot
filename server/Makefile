@@ -65,11 +65,11 @@ re-kube:
 	cd .local-develop/manifest/app && kubectl rollout restart deploy fisap-app
 
 .PHONY: swag
-build-kube:
+swag:
 	go install github.com/swaggo/swag/cmd/swag@latest
 	swag init
 
 .PHONY: push
-build-kube:
+push:
 	chmod +x script/git.sh
-	./script/git.sh feat:all
+	./script/git.sh "feat:all"
