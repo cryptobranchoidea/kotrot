@@ -1,5 +1,10 @@
-import { BoardNewForm } from './_components/BoardNewForm';
+import { Header } from '@/ui/common/Header';
+import { TableNew } from './_components/TableNew';
 
-export default function BoardNew() {
-  return <BoardNewForm />;
+export default function TableNewPage() {
+  return (
+    <Header title="新しいPinを作る">
+      <TableNew />
+    </Header>
+  );
 }
