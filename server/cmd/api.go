@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"github.com/cryptobranchoidea/fisap/pkg/web/router"
+	"github.com/cryptobranchoidea/kotrot/pkg/web/router"
 )
 
 func Exec() {
