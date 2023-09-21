@@ -1,4 +1,4 @@
-import { Flex } from '@kuma-ui/core';
+import { Box } from '@kuma-ui/core';
 import { KumaRegistry } from '@kuma-ui/next-plugin/registry';
 import 'modern-css-reset/dist/reset.min.css';
 import './global.css';
@@ -8,16 +8,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="ja">
       <body>
         <KumaRegistry>
-          <Flex
-            as="main"
-            minHeight="100vh"
-            width="100vw"
-            justifyContent="center"
-            alignItems="center"
-            backgroundColor="colors.bg.main"
-          >
-            {children}
-          </Flex>
+          <Box fontFamily="'Noto Sans JP', sans-serif;">{children}</Box>
         </KumaRegistry>
       </body>
     </html>
