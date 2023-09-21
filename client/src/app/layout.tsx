@@ -1,5 +1,6 @@
 import { Flex } from '@kuma-ui/core';
 import { KumaRegistry } from '@kuma-ui/next-plugin/registry';
+import 'modern-css-reset/dist/reset.min.css';
 import './global.css';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
