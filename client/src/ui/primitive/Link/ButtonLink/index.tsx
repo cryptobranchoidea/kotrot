@@ -1,4 +1,4 @@
-import { color, space } from '@/ui/token';
+import { colors, space } from '@/ui/token';
 import { Text } from '@kuma-ui/core';
 import Link from 'next/link';
 import { FC, ReactNode } from 'react';
@@ -14,7 +14,7 @@ export const ButtonLink: FC<TProps> = ({ href, children }) => {
         justifyContent="center"
         borderRadius={3}
         fontWeight={'bold'}
-        backgroundColor={color.bg.strong}
+        backgroundColor={colors.bg.strong}
         paddingX={space.xl}
         paddingY={space.sm}
         fontSize="fontSizes.md"
