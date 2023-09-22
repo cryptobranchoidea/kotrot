@@ -1,44 +1,42 @@
 import { ButtonLink } from '@/ui/primitive/Link/ButtonLink';
 import { Logo } from '@/ui/primitive/Logo';
 import { space } from '@/ui/token';
-import { Box, Flex, Grid, Spacer, Text } from '@kuma-ui/core';
+import { bp } from '@/util/createBreakPoints';
+import { Box, Flex, Grid, Text } from '@kuma-ui/core';
 import { About } from './components/About';
 
 export default function Home() {
   return (
-    <Grid
-      gridTemplateColumns={['repeat(1, minmax(0, 1fr))', 'repeat(2, minmax(0, 1fr))', 'repeat(2, minmax(0, 1fr))']}
-      justifyContent="center"
-      width="100vw"
-    >
-      <Flex
-        backgroundColor="colors.bg.strong"
-        minHeight={['50vh', '100vh', '100vh']}
-        alignItems="center"
-        justifyContent="center"
-      >
+    <Grid gridTemplateColumns={bp({ sm: 'repeat(1, minmax(0, 1fr))', lg: 'repeat(2, minmax(0, 1fr))' })} width="100vw">
+      <Flex backgroundColor="colors.bg.strong" minHeight="100vh" alignItems="center" justifyContent="center">
         <Box>
           <Logo size="L" />
           <Text
             as="h1"
             fontSize="fontSizes.xl"
-            fontWeight="bold"
             children="KotRot"
             fontFamily="'Changa', sans-serif"
             textAlign="center"
-            lineHeight={1}
-            height={0}
+            lineHeight={0.8}
           />
+          <Box flexDirection="column" gap={space.md} display={bp({ sm: 'flex', lg: 'none' })}>
+            <About />
+            <ButtonLink href="/table/new" children="KotRotを始めよう" />
+          </Box>
         </Box>
       </Flex>
-      <Flex minHeight={['50vh', '100vh', '100vh']} alignItems="center" justifyContent="center">
-        <Box>
+      <Box
+        display={bp({ sm: 'none', lg: 'flex' })}
+        minHeight="100vh"
+        alignItems="center"
+        justifyContent="center"
+        paddingX={space.md}
+      >
+        <Flex flexDirection="column" gap={space.md}>
           <About />
-          <Spacer paddingY={space.md}>
-            <ButtonLink href={'/table/new'} children="KotRotを始めよう" />
-          </Spacer>
-        </Box>
-      </Flex>
+          <ButtonLink href="/table/new" children="KotRotを始めよう" />
+        </Flex>
+      </Box>
     </Grid>
   );
 }

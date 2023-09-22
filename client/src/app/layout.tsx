@@ -8,7 +8,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="ja">
       <body>
         <KumaRegistry>
-          <Box fontFamily="'Noto Sans JP', sans-serif;">{children}</Box>
+          <Box fontFamily="'Noto Sans JP', sans-serif" color="#000000" backgroundColor="#FFE7CA">
+            {children}
+          </Box>
         </KumaRegistry>
       </body>
     </html>
