@@ -1,5 +1,5 @@
 import { space } from '@/ui/token';
-import { bp } from '@/util/createBreakPoints';
+import { bp } from '@/util/setBreakPoint';
 import { Box, Text } from '@kuma-ui/core';
 
 export const About = () => {

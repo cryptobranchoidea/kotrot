@@ -1,7 +1,7 @@
 import { ButtonLink } from '@/ui/primitive/Link/ButtonLink';
 import { Logo } from '@/ui/primitive/Logo';
 import { space } from '@/ui/token';
-import { bp } from '@/util/createBreakPoints';
+import { bp } from '@/util/setBreakPoint';
 import { Box, Flex, Grid, Text } from '@kuma-ui/core';
 import { About } from './components/About';
 
