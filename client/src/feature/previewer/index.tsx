@@ -1,55 +1,26 @@
 'use client';
 import { space } from '@/ui/token';
-import { fetcher } from '@/util/fetcher';
 import { Box, Flex, Text } from '@kuma-ui/core';
 import Image from 'next/image';
 import { FC } from 'react';
-import useSWR from 'swr';
 import { extractServiceName, validUrlChecker } from './utils';
 
-type TProps = { url: string; isPreview?: boolean };
+type TProps = { url: string; title?: string; isPreview?: boolean };
 
-export const Previewer: FC<TProps> = ({ url, isPreview }) => {
+export const Previewer: FC<TProps> = ({ url, title, isPreview }) => {
   const isValidUrl = validUrlChecker(url);
   const siteName = extractServiceName(url);
 
-  if (url === '')
-    return (
-      <Box marginY={space.lg}>
-        <PreviewerMock />
-      </Box>
-    );
+  if (url === '') return <PreviewerMock />;
 
-  if (!isValidUrl)
-    return (
-      <Box marginY={space.lg}>
-        <Text marginY={space.md}>許可されたURLではありません</Text>
-        <PreviewerMock />
-      </Box>
-    );
+  if (!isValidUrl) return <Text marginY={space.md}>許可されたURLではありません</Text>;
 
-  if (!siteName)
-    return (
-      <Box marginY={space.lg}>
-        <Text marginY={space.md}>サイトの名前を取得できませんでした</Text>
-        <PreviewerMock />
-      </Box>
-    );
+  if (!siteName) return <Text marginY={space.md}>サイトの名前を取得できませんでした</Text>;
 
-  return (
-    <Box marginY={space.lg}>
-      <Text>PREVIEW</Text>
-      {isPreview ? <PreviewerWithData url={url} siteName={siteName} /> : <PreviewerMock />}
-    </Box>
-  );
+  return <>{isPreview ? <PreviewerWithData url={url} title={title} siteName={siteName} /> : <PreviewerMock />}</>;
 };
 
-const PreviewerWithData = ({ url, siteName }: TProps & { siteName: string }) => {
-  const { data } = useSWR<{ title: string }>(`/api/preview?url=${url}`, fetcher);
-
-  if (!data) return <Box>ローディング中</Box>;
-  if (data.title === '') return <Box>ogp情報が取得できていない</Box>;
-
+const PreviewerWithData = ({ title, siteName }: TProps & { siteName: string }) => {
   return (
     <Flex alignItems="center" border="solid 1px black" gap={space.md} padding={space.md} borderRadius="5px">
       <Image
@@ -65,7 +36,7 @@ const PreviewerWithData = ({ url, siteName }: TProps & { siteName: string }) => 
         }}
       />
       <Box>
-        <Text>{data.title}</Text>
+        <Text>{title}</Text>
         <Text fontSize="fontSizes.sm" color="colors.text.sub" paddingTop={space.md}>
           {siteName}
         </Text>

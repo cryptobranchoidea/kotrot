@@ -1,6 +1,6 @@
-import { space } from '@/ui/token';
-import { Input as StyledInput } from '@kuma-ui/core';
+import { Box, Input as InternalInput } from '@kuma-ui/core';
 import { ChangeEventHandler, FC, HTMLInputTypeAttribute } from 'react';
+import { Label } from '../Label';
 
 type TProps = {
   type: HTMLInputTypeAttribute;
@@ -11,15 +11,18 @@ type TProps = {
 
 export const Input: FC<TProps> = ({ type, name, state, onChange }) => {
   return (
-    <StyledInput
-      id={name}
-      name={name}
-      type={type}
-      borderRadius={3}
-      width="100%"
-      padding={space.sm}
-      value={state}
-      onChange={onChange}
-    />
+    <Box>
+      <Label name={name} />
+      <InternalInput
+        id={name}
+        name={name}
+        type={type}
+        borderRadius={3}
+        width="100%"
+        border="solid 1px"
+        value={state}
+        onChange={onChange}
+      />
+    </Box>
   );
 };
