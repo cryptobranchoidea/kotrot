@@ -21,7 +21,7 @@ export default function Home() {
           />
           <Box flexDirection="column" gap={space.md} display={bp({ sm: 'flex', lg: 'none' })}>
             <About />
-            <ButtonLink href="/table/new" children="KotRotを始めよう" />
+            <ButtonLink href="/pin/new" children="KotRotを始めよう" />
           </Box>
         </Box>
       </Flex>
@@ -34,7 +34,7 @@ export default function Home() {
       >
         <Flex flexDirection="column" gap={space.md}>
           <About />
-          <ButtonLink href="/table/new" children="KotRotを始めよう" />
+          <ButtonLink href="/pin/new" children="KotRotを始めよう" />
         </Flex>
       </Box>
     </Grid>
