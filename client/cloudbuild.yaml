@@ -1,7 +1,7 @@
 steps:
   #build
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', ':$BUILD_ID', '.']
+    args: ['build', '-t', 'kotorot_build', '.']
   #push
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', '$_GCR_HOSTNAME/$PROJECT_ID/$_SERVICE_NAME:$COMMIT_SHA']
