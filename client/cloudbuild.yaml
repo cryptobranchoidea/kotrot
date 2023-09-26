@@ -1,4 +1,6 @@
 steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['RUN', 'ls']
   #Build image
   - name: 'gcr.io/cloud-builders/docker'
     dir: './'
