@@ -1,6 +1,9 @@
 steps:
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['RUN', 'ls']
+  - name: 'ubuntu'
+    args: ['echo', 'hello world']
+
+  - name: 'ubuntu'
+    args: ['ls']
   #Build image
   - name: 'gcr.io/cloud-builders/docker'
     dir: './'
