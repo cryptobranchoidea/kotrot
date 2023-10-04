@@ -5,7 +5,8 @@ go 1.20
 require (
 	github.com/gofiber/fiber/v2 v2.49.2
 	github.com/gofiber/swagger v0.1.13
-	github.com/seipan/loghook v0.1.8
+	github.com/labstack/gommon v0.4.0
+	github.com/seipan/loghook v0.1.9
 	github.com/swaggo/swag v1.16.2
 )
 
@@ -19,7 +20,6 @@ require (
 	github.com/google/uuid v1.3.1 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/klauspost/compress v1.16.7 // indirect
-	github.com/labstack/gommon v0.4.0 // indirect
 	github.com/mailru/easyjson v0.7.7 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.19 // indirect
