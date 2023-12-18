@@ -6,7 +6,7 @@ require (
 	github.com/gofiber/fiber/v2 v2.51.0
 	github.com/gofiber/swagger v0.1.14
 	github.com/labstack/gommon v0.4.1
-	github.com/seipan/loghook v0.1.12
+	github.com/seipan/loghook v0.3.2
 	github.com/swaggo/swag v1.16.2
 )
 
