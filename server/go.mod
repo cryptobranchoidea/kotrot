@@ -5,7 +5,7 @@ go 1.21
 require (
 	github.com/gofiber/fiber/v2 v2.51.0
 	github.com/gofiber/swagger v0.1.14
-	github.com/labstack/gommon v0.4.1
+	github.com/labstack/gommon v0.4.2
 	github.com/seipan/loghook v0.1.12
 	github.com/swaggo/swag v1.16.2
 )
@@ -31,7 +31,7 @@ require (
 	github.com/valyala/fasthttp v1.50.0 // indirect
 	github.com/valyala/fasttemplate v1.2.2 // indirect
 	github.com/valyala/tcplisten v1.0.0 // indirect
-	golang.org/x/sys v0.14.0 // indirect
+	golang.org/x/sys v0.15.0 // indirect
 	golang.org/x/tools v0.12.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
